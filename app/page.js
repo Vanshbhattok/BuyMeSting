@@ -35,11 +35,11 @@ export default function Home() {
     <div className="hero-image-wrapper md:mt-0 mx-5 md:mx-0 mb-5">
       <div className="mt-10">
         {/* Matching the lower part */}
-        <div className="relative mx-auto w-full max-w-[880px] md:max-w-[980px] aspect-[890/460] md:aspect-[890/460] overflow-hidden rounded-xl border border-gray-800 p-[1px] backdrop-blur-3xl">
+        <div className="relative mx-auto w-full max-w-[880px] md:max-w-[980px] aspect-[820/460] md:aspect-[820/460] overflow-hidden rounded-xl border border-gray-800 p-[1px] backdrop-blur-3xl">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <div className="relative h-full w-full rounded-xl bg-gray-950 backdrop-blur-3xl">
             <Image
-              src="/banner.PNG"
+              src="/devboy.png"
               alt="BuyMeSting's Banner"
               fill
               className="object-contain rounded-xl"
