@@ -117,7 +117,7 @@ Create a `.env.local` file in the root directory:
 
 ```env
 # MongoDB Atlas Connection
-MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/buymesting"
+MONGODB_URI="your_uri_here"
 
 # GitHub OAuth App Credentials
 GITHUB_ID="your_github_client_id"
