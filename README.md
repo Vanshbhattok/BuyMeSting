@@ -1,4 +1,4 @@
-# ☕ Buy Me Sting - Creator Support Platform
+# ⚡ Buy Me Sting - Creator Support Platform
 
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
@@ -298,7 +298,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🙏 Acknowledgments
 
-- Inspired by [Buy Me a Coffee](https://www.buymeacoffee.com/)
 - Built with ❤️ using [Next.js](https://nextjs.org/)
 - Hosted on [Vercel](https://vercel.com/)
 - Icons by [Heroicons](https://heroicons.com/)
