@@ -259,34 +259,16 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-## 📊 Performance & SEO
-
-- ⚡ **Lighthouse Score:** 95+ across all metrics
-- 🎯 **Core Web Vitals:** Optimized for best user experience
-- 🔍 **SEO Ready:** Meta tags, structured data, and sitemap
-- 📱 **Mobile First:** Responsive design with perfect mobile UX
-
----
-
-## 🔒 Security Features
-
-- 🛡️ **OWASP Compliant:** Following security best practices
-- 🔐 **Secure Authentication:** OAuth 2.0 with GitHub
-- 🔒 **Data Protection:** Encrypted data transmission and storage
-- 🚫 **XSS Protection:** Built-in Next.js security features
-
----
-
 ## 📈 Roadmap
 
-- [ ] **Payment Integration** (Stripe/PayPal)
-- [ ] **Multiple Payment Options** (One-time, Monthly, Custom amounts)
-- [ ] **Creator Dashboard** (Analytics, Revenue tracking)
-- [ ] **Message System** (Supporters can leave messages)
+- [x] **Payment Integration** (Stripe/PayPal)
+- [x] **Multiple Payment Options** (UPI, Net Banking, Card options)
+- [x] **Creator Dashboard** (Analytics, Revenue tracking)
+- [x] **Message System** (Supporters can leave messages)
 - [ ] **Social Media Integration** (Twitter, Instagram links)
 - [ ] **Email Notifications** (Support notifications)
 - [ ] **Dark Mode** (Theme switching)
-- [ ] **Mobile App** (React Native)
+- [x] **Responsive App** (Resposive for mobile users)
 
 ---
 
@@ -309,7 +291,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 If you like this project, please ⭐ star it on GitHub!
 
 **Need help?**
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
+- 📧 Email: [your-email@example.com](vanshbhattok@gmail.com)
 - 🐛 Issues: [GitHub Issues](https://github.com/Vanshbhattok/BuyMeSting/issues)
 - 💬 Discussions: [GitHub Discussions](https://github.com/Vanshbhattok/BuyMeSting/discussions)
 
