@@ -3,6 +3,13 @@ import GitHubProvider from "next-auth/providers/github";
 import connectDB from '@/db/connectDB';
 import User from '@/models/User';
 
+// --- ADD THIS DEBUGGING CODE ---
+      console.log("--- VERCEL RUNTIME CHECK ---");
+      console.log("Is MONGODB_URI defined?", !!process.env.MONGODB_URI);
+      console.log("MONGODB_URI value:", process.env.MONGODB_URI);
+      console.log("----------------------------");
+      // ---------------------------------
+
 const providers = [];
 
 if (process.env.NEXTAUTH_URL === "https://buy-me-sting.vercel.app") {
@@ -18,12 +25,7 @@ export const authoptions = NextAuth({
   providers,
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-       // --- ADD THIS DEBUGGING CODE ---
-      console.log("--- VERCEL RUNTIME CHECK ---");
-      console.log("Is MONGODB_URI defined?", !!process.env.MONGODB_URI);
-      console.log("MONGODB_URI value:", process.env.MONGODB_URI);
-      console.log("----------------------------");
-      // ---------------------------------
+       
       if (account?.provider === "github") {
         await connectDB();
         const currentUser = await User.findOne({ email: email });
