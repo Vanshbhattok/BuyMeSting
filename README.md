@@ -261,7 +261,7 @@ We welcome contributions! Here's how you can help:
 
 ## 📈 Roadmap
 
-- [x] **Payment Integration** (Stripe/PayPal)
+- [x] **Payment Integration** (RazorPay)
 - [x] **Multiple Payment Options** (UPI, Net Banking, Card options)
 - [x] **Creator Dashboard** (Analytics, Revenue tracking)
 - [x] **Message System** (Supporters can leave messages)
@@ -282,7 +282,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 - Built with ❤️ using [Next.js](https://nextjs.org/)
 - Hosted on [Vercel](https://vercel.com/)
-- Icons by [Heroicons](https://heroicons.com/)
 
 ---
 
@@ -291,7 +290,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 If you like this project, please ⭐ star it on GitHub!
 
 **Need help?**
-- 📧 Email: [your-email@example.com](vanshbhattok@gmail.com)
+- 📧 Email: [vanshbhattok@gmail.com](vanshbhattok@gmail.com)
 - 🐛 Issues: [GitHub Issues](https://github.com/Vanshbhattok/BuyMeSting/issues)
 - 💬 Discussions: [GitHub Discussions](https://github.com/Vanshbhattok/BuyMeSting/discussions)
 
