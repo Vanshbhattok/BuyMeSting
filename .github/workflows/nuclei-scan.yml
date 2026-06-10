@@ -24,12 +24,11 @@ jobs:
         with:
           args: '-target https://buy-me-sting.vercel.app -severity critical,high -sarif-export nuclei.sarif -timeout 3 -rate-limit 50'
 
-      # If no findings were found, Nuclei will not create the file.
-      # This step creates a valid empty SARIF file so the upload tasks succeed.
+      # If no findings were found, create a valid empty SARIF run object so GitHub's API accepts it.
       - name: Create Empty SARIF if missing
         run: |
           if [ ! -f nuclei.sarif ]; then
-            echo '{"$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json","version":"2.1.0","runs":[]}' > nuclei.sarif
+            echo '{"$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json","version":"2.1.0","runs":[{"tool":{"driver":{"name":"Nuclei"}},"results":[]}]}' > nuclei.sarif
           fi
 
       - name: Upload Scan Artifact
