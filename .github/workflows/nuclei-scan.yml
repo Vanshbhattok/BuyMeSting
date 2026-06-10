@@ -22,8 +22,15 @@ jobs:
       - name: Execute Nuclei Scan
         uses: projectdiscovery/nuclei-action@v3
         with:
-          # Pass all scan parameters directly as flags inside the args field
           args: '-target https://buy-me-sting.vercel.app -severity critical,high -sarif-export nuclei.sarif -timeout 3 -rate-limit 50'
+
+      # If no findings were found, Nuclei will not create the file.
+      # This step creates a valid empty SARIF file so the upload tasks succeed.
+      - name: Create Empty SARIF if missing
+        run: |
+          if [ ! -f nuclei.sarif ]; then
+            echo '{"$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json","version":"2.1.0","runs":[]}' > nuclei.sarif
+          fi
 
       - name: Upload Scan Artifact
         if: always()
