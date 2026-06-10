@@ -22,13 +22,8 @@ jobs:
       - name: Execute Nuclei Scan
         uses: projectdiscovery/nuclei-action@v3
         with:
-          target: 'https://buy-me-sting.vercel.app'
-          sarif-export: 'nuclei.sarif'
-          # Optimizations:
-          # 1. Only scan for critical and high severity vulnerabilities to reduce template count
-          severity: 'critical,high'
-          # 2. Add custom flags to reduce timeouts and limit execution rate (to prevent Vercel blocking)
-          args: '-timeout 3 -rate-limit 50'
+          # Pass all scan parameters directly as flags inside the args field
+          args: '-target https://buy-me-sting.vercel.app -severity critical,high -sarif-export nuclei.sarif -timeout 3 -rate-limit 50'
 
       - name: Upload Scan Artifact
         if: always()
