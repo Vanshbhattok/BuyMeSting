@@ -1,0 +1,35 @@
+name: Nuclei DAST Security Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  nuclei_scan:
+    name: Run Nuclei DAST Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Run Nuclei Scan against your live Vercel URL
+      - name: Execute Nuclei Scan
+        uses: projectdiscovery/nuclei-action@main
+        with:
+          target: 'https://buy-me-sting.vercel.app'
+          sarif-export: 'nuclei.sarif'
+
+      # Step 3: Upload findings to your GitHub Security Dashboard
+      - name: Upload SARIF Report
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'nuclei.sarif'
