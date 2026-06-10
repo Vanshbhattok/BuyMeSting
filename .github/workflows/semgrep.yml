@@ -1,0 +1,38 @@
+name: Semgrep SAST Security Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  semgrep_scan:
+    name: Run Semgrep Scan
+    runs-on: ubuntu-latest
+    
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Perform Semgrep Analysis
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: 'p/default'
+          generateSarif: '1'
+          publishDeployment: false
+
+      - name: Upload Scan Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-scan-report
+          path: semgrep.sarif
