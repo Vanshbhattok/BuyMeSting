@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main", "master" ]
   workflow_dispatch:
-
+#This is a test comment.
 jobs:
   nuclei_scan:
     name: Run Nuclei DAST Scan
